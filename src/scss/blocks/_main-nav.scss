@@ -1,0 +1,17 @@
+.main-nav {
+
+}
+
+.main-nav__list {
+	display: flex;
+	column-gap: 80px;
+}
+
+.main-nav__item {
+
+}
+
+.main-nav__link,
+a.main-nav__link {
+	color: var(--main-text);
+}

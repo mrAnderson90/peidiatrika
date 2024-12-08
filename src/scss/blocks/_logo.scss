@@ -1,0 +1,20 @@
+.logo {
+	display: block;
+	padding: 10px 24px;
+
+	text-transform: uppercase;
+	font-family: var(--second-family);
+	font-weight: 600;
+	font-size: 23px;
+
+	background-color: var(--bg-contrast);
+	border-radius: 60px;
+
+	span {
+		color: var(--white);
+	}
+}
+
+.logo__accent {
+	font-size: 32px;
+}

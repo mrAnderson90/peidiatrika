@@ -1,0 +1,31 @@
+:root {
+	// Fonts
+	--font-family: "Montserrat", sans-serif;
+  --second-family: "Montserrat Alternates", sans-serif;
+  --inter-family: "Inter", sans-serif;
+  --playfair-family: "Playfair Display", sans-serif;
+
+	// Font-sizes
+	--fz-primary: 16px;
+	--fz-main: 20px;
+	--fz-secondary: 18px;
+	--fz-h1: 55px;
+	--fz-h2: 38px;
+	--fz-accent: 100px;
+
+
+
+	// Colors
+	--white: #fff;
+	--black: #252525;
+	--pink: #f5c3c4;
+	--light-pink: #FADEDF;
+	--gray: #E3E3E3;
+	--green: #a1c89f;
+
+	// Color-scheme
+	--main-text: var(--black);
+	--accent-text: var(--green);
+	--bg-base: var(--white);
+	--bg-contrast: var(--pink);
+}

@@ -1,0 +1,24 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:regular,500,600);
+@import url(https://fonts.googleapis.com/css?family=Montserrat+Alternates:regular,500,600);
+@import url(https://fonts.googleapis.com/css?family=Inter:regular,500,600);
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:regular);
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: var(--font-family);
+	font-size: var(--fz-primary);
+	color: var(--main-text);
+}
+
+a, a:link, a:visited {
+	color: #0F7DFF;
+}
+
+a:focus,
+button:focus {
+	outline-offset: 1px;
+	outline: #005fcc auto 1px;
+}

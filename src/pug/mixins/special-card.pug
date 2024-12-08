@@ -1,0 +1,15 @@
+mixin special-card(title, bgType = false)
+	if bgType === 'promo'
+		.special-card.special-card--promo
+			.speicial-card__header
+				h2.special-card__title= title
+				.special-card__agregator
+			.special-card__content
+				block
+	else
+		.special-card
+			.speicial-card__header
+				h2.special-card__title= title
+				.special-card__agregator
+			.special-card__content
+				block

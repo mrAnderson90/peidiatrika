@@ -1,0 +1,363 @@
+/* Reset and base styles  */
+@import url(https://fonts.googleapis.com/css?family=Montserrat:regular,500,600);
+@import url(https://fonts.googleapis.com/css?family=Montserrat+Alternates:regular,500,600);
+@import url(https://fonts.googleapis.com/css?family=Inter:regular,500,600);
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:regular);
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Links */
+a, a:link, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Common */
+aside, nav, footer, header, section, main {
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul, ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Form */
+input, textarea, button, select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button, input[type=submit] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+input:focus, input:active,
+button:focus, button:active {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
+}
+
+:root {
+  --font-family: "Montserrat", sans-serif;
+  --second-family: "Montserrat Alternates", sans-serif;
+  --inter-family: "Inter", sans-serif;
+  --playfair-family: "Playfair Display", sans-serif;
+  --fz-primary: 16px;
+  --fz-main: 20px;
+  --fz-secondary: 18px;
+  --fz-h1: 55px;
+  --fz-h2: 38px;
+  --fz-accent: 100px;
+  --white: #fff;
+  --black: #252525;
+  --pink: #f5c3c4;
+  --light-pink: #FADEDF;
+  --gray: #E3E3E3;
+  --green: #a1c89f;
+  --main-text: var(--black);
+  --accent-text: var(--green);
+  --bg-base: var(--white);
+  --bg-contrast: var(--pink);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--fz-primary);
+  color: var(--main-text);
+}
+
+a, a:link, a:visited {
+  color: #0F7DFF;
+}
+
+a:focus,
+button:focus {
+  outline-offset: 1px;
+  outline: #005fcc auto 1px;
+}
+
+.container {
+  width: 1230px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+@media (max-width: 1250px) {
+  .container {
+    width: 768px;
+    padding: 0 15px;
+  }
+}
+@media (max-width: 788px) {
+  .container {
+    width: 360px;
+  }
+}
+@media (max-width: 1250px) {
+  .container--tablet-fluid {
+    width: auto;
+  }
+}
+@media (max-width: 788px) {
+  .container--mobile-fluid {
+    width: auto;
+  }
+}
+
+.main {
+  margin-bottom: 80px;
+}
+@media (max-width: 1250px) {
+  .main {
+    margin-bottom: 60px;
+  }
+}
+@media (max-width: 788px) {
+  .main {
+    margin-bottom: 40px;
+  }
+}
+
+.main__wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+}
+@media (max-width: 788px) {
+  .main__wrapper {
+    row-gap: 40px;
+  }
+}
+
+.logo {
+  display: block;
+  padding: 10px 24px;
+  text-transform: uppercase;
+  font-family: var(--second-family);
+  font-weight: 600;
+  font-size: 23px;
+  background-color: var(--bg-contrast);
+  border-radius: 60px;
+}
+.logo span {
+  color: var(--white);
+}
+
+.logo__accent {
+  font-size: 32px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1;
+}
+@media (max-width: 788px) {
+  .title {
+    font-size: 24px;
+  }
+}
+.title--lg {
+  font-size: 32px;
+  font-weight: 800;
+}
+@media (max-width: 1250px) {
+  .title--lg {
+    font-size: 26px;
+  }
+}
+@media (max-width: 788px) {
+  .title--lg {
+    font-size: 22px;
+  }
+}
+
+.special-card {
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 60px;
+  background-color: var(--light-pink);
+}
+.special-card--promo {
+  background-image: url("../img/promo/promo@2x.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.speicial-card__header {
+  display: flex;
+}
+
+.special-card__title {
+  font-size: 2rem;
+  padding: 50px;
+  background-color: #fff;
+  border-bottom-right-radius: 60px;
+}
+
+.special-card__agregator {
+  flex: 1;
+  position: relative;
+}
+.special-card__agregator::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90px;
+  height: 50%;
+  border-top-left-radius: 60px;
+  box-shadow: -18px -18px 0 #fff;
+  background-color: transparent;
+}
+
+.special-card__content {
+  flex: 1;
+  position: relative;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.special-card__content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90px;
+  height: 50%;
+  border-top-left-radius: 60px;
+  box-shadow: -18px -18px 0 #fff;
+  background-color: transparent;
+}
+
+.header__wrapper {
+  padding: 30px 0;
+  border-bottom: 1px solid var(--gray);
+}
+
+.header__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-nav__list {
+  display: flex;
+  column-gap: 80px;
+}
+
+.main-nav__link,
+a.main-nav__link {
+  color: var(--main-text);
+}
+
+.promo__wrapper {
+  padding: 45px 0 70px;
+}
+
+.btn,
+a.btn {
+  padding: 10px 20px;
+  border-radius: 80px;
+  background-color: #039be5;
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in;
+}
+.btn:hover,
+a.btn:hover {
+  background-color: #5ac1f5;
+}
+.btn--wide,
+a.btn--wide {
+  width: 100%;
+}
+
+.btn-link,
+a.btn-link {
+  padding: 6px 10px;
+  border-radius: 3px;
+  background-color: #f2f2f2;
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 400;
+  color: #000;
+  text-align: left;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in;
+}
+@media (max-width: 788px) {
+  .btn-link,
+  a.btn-link {
+    padding: 10px;
+  }
+}
+.btn-link:hover,
+a.btn-link:hover {
+  background-color: #c2c0c0;
+}
+/*# sourceMappingURL=style.css.map */
