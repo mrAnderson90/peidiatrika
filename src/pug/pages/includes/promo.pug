@@ -1,6 +1,38 @@
-section.promo
-	.container
-		.promo__wrapper
-			+special-card('Card Title', 'promo')
-				.promo__content
-					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit similique omnis nostrum delectus illo at consequuntur, cumque saepe quae molestiae. Numquam rem possimus qui voluptatum quam distinctio animi quia blanditiis.
+section.section.promo
+  .container
+    .promo__slider.slider
+      .slide
+        article.promo-article
+          .promo-article__img
+            picture
+                source(srcset="img/slider/promo-01.avif", type="image/avif")
+                source(srcset="img/slider/promo-01.webp", type="image/webp")
+                img(src="img/slider/promo-01.jpg", alt="Slide 01")
+          .promo-article__body
+            h3.title.promo-article__title Педиятрика&nbsp;–&nbsp;это...
+            .promo-article__content
+              p Интересные знакомства и погружение в профессию на трехдневном форуме
+      button.slider__control.slider__control--previous
+      button.slider__control.slider__control--next
+    .promo__additional
+      .promo__item
+        .promo__info
+          p.promo__statistic 20
+          p.promo__caption встреч с игрой
+        .promo__img
+          picture
+            source(srcset="img/promo/game-piece.webp", type="image/webp", media="(max-width: 788px)")
+            source(srcset="img/promo/game-piece.png", type="image/png", media="(max-width: 1250px)")
+            source(srcset="img/promo/game-piece.webp", type="image/webp")
+            img(src="img/promo/game-piece.png", alt="Игральная фишка")
+      .promo__item
+        .promo__info
+          .promo__statistic 600+
+          .promo__caption участников
+        .promo__img
+          picture
+            source(srcset="img/promo/nurse.webp", type="image/webp", media="(max-width: 788px)")
+            source(srcset="img/promo/nurse.png", type="image/png", media="(max-width: 1250px)")
+            source(srcset="img/promo/nurse.webp", type="image/webp")
+            img(src="img/promo/nurse.png", alt="Медсестра")
+          

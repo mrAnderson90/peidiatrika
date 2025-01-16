@@ -22,3 +22,41 @@ button:focus {
 	outline-offset: 1px;
 	outline: #005fcc auto 1px;
 }
+
+body {
+	font-family: var(--font-family);
+	font-size: 20px;
+	line-height: 140%;
+	color: var(--black);
+
+	@include tablet {
+		font-size: 15px;
+	}
+
+	@include mobile {
+		font-size: 14px;
+	}
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+}
+
+.section {
+	padding: 70px 0;
+
+	@include tablet {
+		padding: 45px 0;
+	}
+
+	@include mobile {
+		padding: 20px 0;
+	}
+}

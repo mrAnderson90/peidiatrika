@@ -1,0 +1,39 @@
+.social__list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+
+  @include tablet {
+    justify-content: center;
+  }
+}
+
+.social__item {
+}
+
+.social__link,
+a.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 6px;
+
+  width: 40px;
+  height: 40px;
+
+  background-color: var(--bg-base);
+  border-radius: 50%;
+
+  transition: all .2s ease-in-out;
+
+  &:hover {
+    opacity: 0.8;
+    transition: all .2s ease-in-out;
+  }
+}
+
+a.social__link--tg img {
+  transform: translateX(-1px);
+}

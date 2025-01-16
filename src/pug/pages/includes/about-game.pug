@@ -1,0 +1,19 @@
+section.section.about-game
+  .container
+    .about-game__body
+      .about-game__headers
+        .about-game__header
+          h2.about-game__title.title Об игре
+          .about-game__content
+            p Настольная карточная игра “ПедиЯтрика” состоит из поля и трех типов карточек с вопросами про детский организм, первую помощь и не только
+        .about-game__header
+          h2.about-game__title.title Для кого
+          .about-game__content
+            p Предназначена для школьников 9-11 классов с целью развития у них интереса к профессии врача-педиатра и популяризации направления “Педиатрия” среди абитуриентов
+      .about-game__img
+        picture
+          //- source(srcset="img/promo/game-piece.webp", type="image/webp", media="(max-width: 788px)")
+          //- source(srcset="img/promo/game-piece.png", type="image/png", media="(max-width: 1250px)")
+          source(srcset="img/about-game/game-field.webp", type="image/webp")
+          //- source(srcset="img/about-game/game-field.jpg", type="image/jpeg")
+          img(src="img/about-game/game-field.png", alt="Игровое поле")

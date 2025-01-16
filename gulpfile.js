@@ -10,13 +10,14 @@ const webp = require('gulp-webp');
 const imagemin = require('gulp-imagemin');
 const newer = require('gulp-newer');
 const pug = require('gulp-pug');
+const clean = require('gulp-clean');
 
 const pugSettings = {
 	includePaths: 'src/components'
 };
 
 function cleanDist() {
-	return src('dist').pipe(clean());
+	return src('docs').pipe(clean());
 }
 
 function pages() {
@@ -27,11 +28,11 @@ function pages() {
 }
 
 function images() {
-	return src(['src/img/**/*.*', '!src/img/src/*.svg'], { base: 'src/img' })
+	return src(['src/img/**/*.*', '!src/img/**/*.svg', '!src/img/**/*.ico'], { base: 'src/img' })
 		.pipe(newer('app/img'))
 		.pipe(avif({ quality: 50 }))
 
-		.pipe(src(['src/img/**/*.*']), { base: 'src/img' })
+		.pipe(src(['src/img/**/*.*', '!src/img/**/*.ico']), { base: 'src/img' })
 		.pipe(newer('app/img'))
 		.pipe(webp())
 
@@ -77,11 +78,11 @@ function browsersync() {
 function building() {
 	return src([
 		'app/css/style.css',
-		'app/img/*.*',
-		'app/js/bundle.js',
+		'app/img/**/*.*',
+		'app/js/**/*.js',
 		'app/*.html'
 	], { base: 'app' })
-		.pipe(dest('dist'))
+		.pipe(dest('docs'))
 }
 
 exports.pages = pages;

@@ -1,0 +1,33 @@
+.about-game {
+
+}
+
+.about-game__body {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  column-gap: 95px;
+}
+
+.about-game__headers {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 70px;
+}
+
+.about-game__header {
+
+}
+
+.about-game__title {
+  margin-bottom: 20px;
+}
+
+.about-game__content {
+
+}
+
+.about-game__img {
+  max-width: 566px;
+}

@@ -1,0 +1,46 @@
+.slider {
+  position: relative;
+}
+
+.slider__control {
+  position: absolute;
+  top: 50%;
+
+  width: 80px;
+  height: 80px;
+
+  border: 10px solid var(--bg-accent);
+  border-radius: 50%;
+
+  background-color: var(--bg-base);
+
+  &::before {
+    content: "";
+    width: 18px;
+    height: 18px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, -50%);
+
+    background-image: url('../img/icons/chevron.svg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &--previous {
+    left: 0;
+    transform: translate(-50%, -50%);
+
+    &::before {
+      transform: translate(-60%, -50%) scaleX(-1);
+    }
+  }
+
+  &--next {
+    right: 0;
+    transform: translate(50%, -50%);
+  }
+}

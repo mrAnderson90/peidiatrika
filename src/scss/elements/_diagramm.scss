@@ -1,0 +1,34 @@
+.diagramm {
+  position: absolute;
+  bottom: 12px;
+  right: 18px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+.diagramm__col {
+  width: 34px;
+  border: 1px solid #2B2A29;
+  border-bottom: none;
+
+
+  &--1 {
+    height: 329px;
+    background-color: #a1c89f;
+  }
+
+  &--2 {
+    height: 421px;
+    background-color: #fff;
+  }
+
+  &--3 {
+    height: 248px;
+    background-color: #c59cb4;
+    border-bottom-right-radius: 30px;
+  }
+}

@@ -1,0 +1,32 @@
+.promo-article {
+  position: relative;
+  padding: 50px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  column-gap: 40px;
+  
+  border-radius: var(--main-radius);
+
+  background-color: var(--bg-base);
+  background-image: url('../img/background/pulse-lg.jpg');
+  background-size: contain;
+  background-position: center 90%;
+  background-repeat: no-repeat;
+}
+
+.promo-article__img {
+  flex-shrink: 0;
+  border-radius: var(--main-radius);
+  overflow: hidden;
+}
+
+.promo-article__body {
+}
+
+.promo-article__title {
+}
+
+.promo-article__content {
+}

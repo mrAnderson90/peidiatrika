@@ -1,15 +1,15 @@
-mixin special-card(title, bgType = false)
-	if bgType === 'promo'
-		.special-card.special-card--promo
+mixin special-card(title, bgType = 'default')
+	if bgType === 'hero'
+		.special-card.special-card--hero
 			.speicial-card__header
-				h2.special-card__title= title
+				h2.title.special-card__title !{title}
 				.special-card__agregator
 			.special-card__content
 				block
 	else
 		.special-card
 			.speicial-card__header
-				h2.special-card__title= title
+				h3.title.title--md.special-card__title !{title}
 				.special-card__agregator
 			.special-card__content
 				block

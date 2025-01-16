@@ -1,8 +1,48 @@
 .promo {
+  background-color: var(--bg-accent);
 }
 
-.promo__wrapper {
-	padding: 45px 0 70px;
+.promo__slider {
+  margin-bottom: 50px;
 }
-.promo__content {
+
+.promo__additional {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 50px;
+}
+
+.promo__item {
+  flex: 1;
+  max-height: 249px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 30px;
+
+  padding: 42px 50px;
+
+  border-radius: var(--main-radius);
+  background-color: var(--bg-base);
+}
+
+
+
+.promo__statistic {
+  font-family: var(--second-family);
+  font-weight: 500;
+  font-size: 100px;
+  line-height: 120%;
+  color: var(--accent-text);
+}
+
+.promo__caption {
+  font-size: 20px;
+  line-height: 140%;
+}
+
+.promo__img {
+  align-self: flex-end;
+  transform: translateY(40px);
 }

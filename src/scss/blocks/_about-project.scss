@@ -1,0 +1,35 @@
+.about-project {
+}
+
+.about-project__title {
+  margin-bottom: 37px;
+  text-align: center;
+}
+
+.about-project__body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 50px;
+}
+
+.about-project__item {
+  flex: 1;
+}
+
+.about-project__content {
+  padding: 50px;
+  padding-right: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 30px;
+  overflow: hidden;
+
+  p.restricted {
+    width: 387px;
+  }
+}
+
+.about-project__diagramm {
+}

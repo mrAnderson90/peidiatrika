@@ -1,0 +1,71 @@
+$border-raduis: 60px;
+$before-color: transparent;
+
+.special-card {
+	min-height: 500px;
+	display: flex;
+	flex-direction: column;
+	border-radius: $border-raduis;
+	background-color: var(--secondary);
+
+	&--hero {
+		background-image: url('../img/hero/hero@2x.jpg');
+		background-position: center;
+		background-size: cover;
+	}
+}
+
+.speicial-card__header {
+	display: flex;
+}
+
+.special-card__title {
+	max-width: 635px;
+	padding: 40px;
+	background-color: #fff;
+	border-bottom-right-radius: $border-raduis;
+}
+
+.special-card--hero .special-card__title {
+	padding-top: 0;
+	padding-left: 0;
+}
+
+.special-card__agregator {
+	flex: 1;
+	position: relative;
+	// background-color: Coral;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: calc($border-raduis * 1.5);
+		height: 50%;
+		border-top-left-radius: $border-raduis;
+		box-shadow: calc($border-raduis * -0.4) calc($border-raduis * -0.2) 0 5px #fff;
+
+		background-color: $before-color;
+	}
+}
+
+.special-card__content {
+	flex: 1;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: calc($border-raduis * 1.5);
+		height: 50%;
+		border-top-left-radius: $border-raduis;
+		box-shadow: calc($border-raduis * -0.3) calc($border-raduis * -0.4) 0 5px #fff;
+
+		background-color: $before-color;
+	}
+}

@@ -1,0 +1,41 @@
+.logo {
+	display: block;
+	padding: 10px 24px;
+
+	text-transform: uppercase;
+	font-family: var(--second-family);
+	font-weight: 600;
+	font-size: 23px;
+
+	background-color: var(--bg-accent);
+	border-radius: 60px;
+
+	@include tablet {
+		padding: 8px 16px;
+
+		font-size: 16px;
+	}
+
+	@include mobile {
+		padding: 4px 7px;
+
+		font-size: 7px;
+	}
+
+	span {
+		color: var(--white);
+	}
+}
+
+.logo__accent {
+	font-size: 32px;
+
+
+	@include tablet {
+		font-size: 23px;
+	}
+
+	@include mobile {
+		font-size: 10px;
+	}
+}

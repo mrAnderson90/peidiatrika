@@ -1,7 +1,7 @@
 :root {
 	// Fonts
-	--font-family: "Montserrat", sans-serif;
-  --second-family: "Montserrat Alternates", sans-serif;
+	--font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  --second-family: "Montserrat Alternates", Arial, Helvetica, sans-serif;
   --inter-family: "Inter", sans-serif;
   --playfair-family: "Playfair Display", sans-serif;
 
@@ -10,16 +10,17 @@
 	--fz-main: 20px;
 	--fz-secondary: 18px;
 	--fz-h1: 55px;
-	--fz-h2: 38px;
+	--fz-h2: 36px;
+	--fz-h3: 24px;
 	--fz-accent: 100px;
 
 
 
 	// Colors
+	--primary: #f5c3c4;
+	--secondary: #FADEDF;
 	--white: #fff;
 	--black: #252525;
-	--pink: #f5c3c4;
-	--light-pink: #FADEDF;
 	--gray: #E3E3E3;
 	--green: #a1c89f;
 
@@ -27,5 +28,8 @@
 	--main-text: var(--black);
 	--accent-text: var(--green);
 	--bg-base: var(--white);
-	--bg-contrast: var(--pink);
+	--bg-accent: var(--primary);
+
+	// Radius
+	--main-radius: 60px;
 }

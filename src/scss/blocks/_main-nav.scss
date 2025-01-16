@@ -5,6 +5,14 @@
 .main-nav__list {
 	display: flex;
 	column-gap: 80px;
+
+	@include tablet {
+		gap: 50px;
+	}
+
+	@include mobile {
+		gap: 15px;
+	}
 }
 
 .main-nav__item {
@@ -13,5 +21,16 @@
 
 .main-nav__link,
 a.main-nav__link {
+	font-size: 18px;
+
 	color: var(--main-text);
+
+
+	@include tablet {
+		font-size: 12px;
+	}
+
+	@include mobile {
+		font-size: 8px;
+	}
 }
