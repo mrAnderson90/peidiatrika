@@ -20,6 +20,14 @@
   flex-shrink: 0;
   border-radius: var(--main-radius);
   overflow: hidden;
+
+  width: 420px;
+  height: 420px;
+
+  @include tablet {
+    width: 326px;
+    height: 326px;
+  }
 }
 
 .promo-article__body {

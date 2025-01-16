@@ -5,8 +5,10 @@ section.section.promo
         article.promo-article
           .promo-article__img
             picture
-                source(srcset="img/slider/promo-01.avif", type="image/avif")
-                source(srcset="img/slider/promo-01.webp", type="image/webp")
+                //- source(srcset="img/slider/promo-01.avif", type="image/avif")
+                //- source(srcset="img/slider/promo-01.webp", type="image/webp")
+                source(srcset="img/slider/promo-01-md.jpg", type="image/jpeg", media="(max-width: 1250px)")
+                source(srcset="img/slider/promo-01@4x.jpg", type="image/jpeg")
                 img(src="img/slider/promo-01.jpg", alt="Slide 01")
           .promo-article__body
             h3.title.promo-article__title Педиятрика&nbsp;–&nbsp;это...

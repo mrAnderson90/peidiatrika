@@ -240,6 +240,7 @@ body {
 @media (max-width: 788px) {
   .header__wrapper {
     padding: 10px 0;
+    border-width: 1px;
   }
 }
 
@@ -356,6 +357,13 @@ a.main-nav__link {
   align-items: center;
   column-gap: 50px;
 }
+@media (max-width: 1250px) {
+  .about-project__body {
+    flex-direction: column;
+    align-items: stretch;
+    row-gap: 30px;
+  }
+}
 
 .about-project__item {
   flex: 1;
@@ -370,8 +378,18 @@ a.main-nav__link {
   column-gap: 30px;
   overflow: hidden;
 }
+@media (max-width: 1250px) {
+  .about-project__content {
+    padding: 30px;
+  }
+}
 .about-project__content p.restricted {
   width: 387px;
+}
+@media (max-width: 1250px) {
+  .about-project__content p.restricted {
+    width: 425px;
+  }
 }
 
 .about-game__body {
@@ -534,16 +552,39 @@ a.main-nav__link {
 }
 
 .special-card {
-  min-height: 500px;
+  --border-raduis: 60px;
+  --before-color: transparent;
+}
+@media (max-width: 1250px) {
+  .special-card {
+    --border-raduis: 40px;
+  }
+}
+@media (max-width: 788px) {
+  .special-card {
+    --border-raduis: 20px;
+  }
+}
+
+.special-card {
   display: flex;
   flex-direction: column;
-  border-radius: 60px;
+  border-radius: var(--border-raduis);
   background-color: var(--secondary);
 }
 .special-card--hero {
-  background-image: url("../img/hero/hero@2x.jpg");
+  min-height: 500px;
+  background-image: url("../img/hero/hero.jpg");
   background-position: center;
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 1170px 553px;
+}
+@media (max-width: 1250px) {
+  .special-card--hero {
+    min-height: 698px;
+    background-size: 1478px 698px;
+    background-position-x: 82%;
+  }
 }
 
 .speicial-card__header {
@@ -554,7 +595,17 @@ a.main-nav__link {
   max-width: 635px;
   padding: 40px;
   background-color: #fff;
-  border-bottom-right-radius: 60px;
+  border-bottom-right-radius: var(--border-raduis);
+}
+@media (max-width: 1250px) {
+  .special-card__title {
+    padding: 30px;
+  }
+}
+@media (max-width: 788px) {
+  .special-card__title {
+    padding: 20px;
+  }
 }
 
 .special-card--hero .special-card__title {
@@ -571,11 +622,11 @@ a.main-nav__link {
   position: absolute;
   top: 0;
   left: 0;
-  width: 90px;
+  width: calc(var(--border-raduis) * 1.5);
   height: 50%;
-  border-top-left-radius: 60px;
-  box-shadow: -24px -12px 0 5px #fff;
-  background-color: transparent;
+  border-top-left-radius: var(--border-raduis);
+  box-shadow: calc(var(--border-raduis) * -0.4) calc(var(--border-raduis) * -0.2) 0 5px #fff;
+  background-color: var(--before-color);
 }
 
 .special-card__content {
@@ -589,11 +640,11 @@ a.main-nav__link {
   position: absolute;
   top: 0;
   left: 0;
-  width: 90px;
+  width: calc(var(--border-raduis) * 1.5);
   height: 50%;
-  border-top-left-radius: 60px;
-  box-shadow: -18px -24px 0 5px #fff;
-  background-color: transparent;
+  border-top-left-radius: var(--border-raduis);
+  box-shadow: calc(var(--border-raduis) * -0.3) calc(var(--border-raduis) * -0.4) 0 5px #fff;
+  background-color: var(--before-color);
 }
 
 .promo-article {
@@ -615,6 +666,14 @@ a.main-nav__link {
   flex-shrink: 0;
   border-radius: var(--main-radius);
   overflow: hidden;
+  width: 420px;
+  height: 420px;
+}
+@media (max-width: 1250px) {
+  .promo-article__img {
+    width: 326px;
+    height: 326px;
+  }
 }
 
 .slider {
@@ -664,24 +723,51 @@ a.main-nav__link {
   justify-content: center;
   overflow: hidden;
 }
+@media (max-width: 1250px) {
+  .diagramm {
+    right: 70px;
+    bottom: 2px;
+  }
+}
 
 .diagramm__col {
   width: 34px;
   border: 1px solid #2B2A29;
   border-bottom: none;
 }
+@media (max-width: 1250px) {
+  .diagramm__col {
+    width: 46px;
+  }
+}
 .diagramm__col--1 {
   height: 329px;
   background-color: #a1c89f;
+}
+@media (max-width: 1250px) {
+  .diagramm__col--1 {
+    height: 166px;
+  }
 }
 .diagramm__col--2 {
   height: 421px;
   background-color: #fff;
 }
+@media (max-width: 1250px) {
+  .diagramm__col--2 {
+    height: 231px;
+  }
+}
 .diagramm__col--3 {
   height: 248px;
   background-color: #c59cb4;
   border-bottom-right-radius: 30px;
+}
+@media (max-width: 1250px) {
+  .diagramm__col--3 {
+    height: 120px;
+    border-bottom-right-radius: 0;
+  }
 }
 
 .social__list {

@@ -8,6 +8,11 @@
   justify-content: center;
 
   overflow: hidden;
+
+  @include tablet {
+    right: 70px;
+    bottom: 2px;
+  }
 }
 
 .diagramm__col {
@@ -15,20 +20,37 @@
   border: 1px solid #2B2A29;
   border-bottom: none;
 
+  @include tablet {
+    width: 46px;
+  }
+
 
   &--1 {
     height: 329px;
     background-color: #a1c89f;
+
+    @include tablet {
+      height: 166px;
+    }
   }
 
   &--2 {
     height: 421px;
     background-color: #fff;
+
+    @include tablet {
+      height: 231px;
+    }
   }
 
   &--3 {
     height: 248px;
     background-color: #c59cb4;
     border-bottom-right-radius: 30px;
+
+    @include tablet {
+      height: 120px;
+      border-bottom-right-radius: 0;
+    }
   }
 }

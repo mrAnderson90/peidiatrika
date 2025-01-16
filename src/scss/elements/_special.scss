@@ -1,17 +1,35 @@
-$border-raduis: 60px;
-$before-color: transparent;
+.special-card {
+	--border-raduis: 60px;
+	--before-color: transparent;
+
+	@include tablet {
+		--border-raduis: 40px;
+	}
+
+	@include mobile {
+		--border-raduis: 20px;
+	}
+}
 
 .special-card {
-	min-height: 500px;
 	display: flex;
 	flex-direction: column;
-	border-radius: $border-raduis;
+	border-radius: var(--border-raduis);
 	background-color: var(--secondary);
 
 	&--hero {
-		background-image: url('../img/hero/hero@2x.jpg');
+		min-height: 500px;
+		background-image: url('../img/hero/hero.jpg');
 		background-position: center;
-		background-size: cover;
+		background-repeat: no-repeat;
+		background-size: 1170px 553px;
+
+		@include tablet {
+			min-height: 698px;
+
+			background-size: 1478px 698px;
+			background-position-x: 82%;
+		}
 	}
 }
 
@@ -23,7 +41,15 @@ $before-color: transparent;
 	max-width: 635px;
 	padding: 40px;
 	background-color: #fff;
-	border-bottom-right-radius: $border-raduis;
+	border-bottom-right-radius: var(--border-raduis);
+
+	@include tablet {
+		padding: 30px;
+	}
+
+	@include mobile {
+		padding: 20px;
+	}
 }
 
 .special-card--hero .special-card__title {
@@ -41,12 +67,12 @@ $before-color: transparent;
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: calc($border-raduis * 1.5);
+		width: calc(var(--border-raduis) * 1.5);
 		height: 50%;
-		border-top-left-radius: $border-raduis;
-		box-shadow: calc($border-raduis * -0.4) calc($border-raduis * -0.2) 0 5px #fff;
+		border-top-left-radius: var(--border-raduis);
+		box-shadow: calc(var(--border-raduis) * -0.4) calc(var(--border-raduis) * -0.2) 0 5px #fff;
 
-		background-color: $before-color;
+		background-color: var(--before-color);
 	}
 }
 
@@ -61,11 +87,11 @@ $before-color: transparent;
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: calc($border-raduis * 1.5);
+		width: calc(var(--border-raduis) * 1.5);
 		height: 50%;
-		border-top-left-radius: $border-raduis;
-		box-shadow: calc($border-raduis * -0.3) calc($border-raduis * -0.4) 0 5px #fff;
+		border-top-left-radius: var(--border-raduis);
+		box-shadow: calc(var(--border-raduis) * -0.3) calc(var(--border-raduis) * -0.4) 0 5px #fff;
 
-		background-color: $before-color;
+		background-color: var(--before-color);
 	}
 }
