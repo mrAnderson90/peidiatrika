@@ -14,6 +14,12 @@
 
   background-color: var(--bg-base);
 
+  @include tablet {
+    width: 50px;
+    height: 50px;
+    border: 6px solid var(--bg-accent);
+  }
+
   @include mobile {
     top: 31%;
     width: 40px;

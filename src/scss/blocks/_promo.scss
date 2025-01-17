@@ -35,7 +35,7 @@
   }
 
   @include mobile {
-    padding: 15px 12px;
+    padding: 12px 12px;
     border-radius: var(--radius-3);
   }
 }
@@ -55,6 +55,7 @@
 
   @include mobile {
     font-size: 30px;
+    line-height: 116%;
   }
 }
 
