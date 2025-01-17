@@ -7,18 +7,39 @@
   align-items: flex-start;
   column-gap: 40px;
   
-  border-radius: var(--main-radius);
+  border-radius: var(--radius-1);
 
   background-color: var(--bg-base);
-  background-image: url('../img/background/pulse-lg.jpg');
+  background-image: url('../img/background/pulse-lg.svg');
   background-size: contain;
   background-position: center 90%;
   background-repeat: no-repeat;
+
+  @include tablet {
+    padding: 30px;
+
+    border-radius: var(--radius-2);
+
+    background-position: center 80%;
+    background-image: url('../img/background/pulse-md.svg');
+  }
+
+  @include mobile {
+    padding: 20px;
+
+    flex-direction: column-reverse;
+    row-gap: 62px;
+
+    border-radius: var(--radius-3);
+
+    background-position: center 25%;
+    background-image: url('../img/background/pulse-sm.svg');
+  }
 }
 
 .promo-article__img {
   flex-shrink: 0;
-  border-radius: var(--main-radius);
+  border-radius: var(--radius-1);
   overflow: hidden;
 
   width: 420px;
@@ -27,6 +48,13 @@
   @include tablet {
     width: 326px;
     height: 326px;
+    border-radius: var(--radius-2);
+  }
+
+  @include mobile {
+    width: 290px;
+    height: 208px;
+    border-radius: var(--radius-3);
   }
 }
 
@@ -34,7 +62,16 @@
 }
 
 .promo-article__title {
+  margin-bottom: 20px;
+
+  @include tablet {
+    margin-bottom: 10px;
+  }
 }
 
 .promo-article__content {
+
+  @include mobile {
+    max-width: 230px;
+  }
 }

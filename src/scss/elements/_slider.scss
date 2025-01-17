@@ -14,6 +14,13 @@
 
   background-color: var(--bg-base);
 
+  @include mobile {
+    top: 31%;
+    width: 40px;
+    height: 40px;
+    border: 4px solid var(--bg-accent);
+  }
+
   &::before {
     content: "";
     width: 18px;
@@ -28,6 +35,11 @@
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+
+    @include mobile {
+      width: 12px;
+      height: 12px;
+    }
   }
 
   &--previous {

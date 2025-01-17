@@ -7,6 +7,7 @@ section.section.promo
             picture
                 //- source(srcset="img/slider/promo-01.avif", type="image/avif")
                 //- source(srcset="img/slider/promo-01.webp", type="image/webp")
+                source(srcset="img/slider/promo-01-sm.jpg", type="image/jpeg", media="(max-width: 788px)")
                 source(srcset="img/slider/promo-01-md.jpg", type="image/jpeg", media="(max-width: 1250px)")
                 source(srcset="img/slider/promo-01@4x.jpg", type="image/jpeg")
                 img(src="img/slider/promo-01.jpg", alt="Slide 01")
@@ -19,22 +20,22 @@ section.section.promo
     .promo__additional
       .promo__item
         .promo__info
-          p.promo__statistic 20
+          p.promo__index 20
           p.promo__caption встреч с игрой
         .promo__img
           picture
-            source(srcset="img/promo/game-piece.webp", type="image/webp", media="(max-width: 788px)")
-            source(srcset="img/promo/game-piece.png", type="image/png", media="(max-width: 1250px)")
-            source(srcset="img/promo/game-piece.webp", type="image/webp")
-            img(src="img/promo/game-piece.png", alt="Игральная фишка")
+            source(srcset="img/promo/game-pieces-sm.svg", type="image/svg+xml", media="(max-width: 788px)")
+            //- source(srcset="img/promo/game-pieces.png", type="image/png", media="(max-width: 1250px)")
+            source(srcset="img/promo/game-pieces.svg", type="image/svg+xml")
+            img(src="img/promo/game-pieces.svg", alt="Игральная фишка")
       .promo__item
         .promo__info
-          .promo__statistic 600+
+          .promo__index 600+
           .promo__caption участников
         .promo__img
           picture
-            source(srcset="img/promo/nurse.webp", type="image/webp", media="(max-width: 788px)")
-            source(srcset="img/promo/nurse.png", type="image/png", media="(max-width: 1250px)")
-            source(srcset="img/promo/nurse.webp", type="image/webp")
-            img(src="img/promo/nurse.png", alt="Медсестра")
+            source(srcset="img/promo/nurse-sm.svg", type="image/svg+xml", media="(max-width: 788px)")
+            //- source(srcset="img/promo/nurse.png", type="image/png", media="(max-width: 1250px)")
+            source(srcset="img/promo/nurse.svg", type="image/svg+xml")
+            img(src="img/promo/nurse.svg", alt="Медсестра")
           
