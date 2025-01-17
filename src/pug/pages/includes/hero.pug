@@ -1,4 +1,12 @@
 section.hero
 	.container
 		.hero__wrapper
-			+special-card('&laquo;Здоровье детей&nbsp;&mdash;<br>в&nbsp;наших руках!&raquo;', 'hero')
+			.hero__special-card
+				+special-card('&laquo;Здоровье детей&nbsp;&mdash;<br>в&nbsp;наших руках!&raquo;', 'hero')
+			.hero__mobile
+				h2.title.hero__mobile-title &laquo;Здоровье детей&nbsp;&mdash; в&nbsp;наших руках!&raquo;
+				.hero__mobile-img
+					picture
+							//- source(srcset="img/slider/promo-01.avif", type="image/avif")
+							//- source(srcset="img/slider/promo-01.webp", type="image/webp")
+							img(src="img/hero/hero-sm.jpg", alt="Фото с занятия")

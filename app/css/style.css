@@ -302,6 +302,35 @@ a.main-nav__link {
 .hero__wrapper {
   padding: 45px 0 70px;
 }
+@media (max-width: 1250px) {
+  .hero__wrapper {
+    padding: 30px 0 50px;
+  }
+}
+@media (max-width: 788px) {
+  .hero__wrapper {
+    padding: 20px 0;
+  }
+}
+
+@media (max-width: 788px) {
+  .hero__special-card {
+    display: none;
+  }
+}
+
+.hero__mobile-title {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.hero__mobile-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: var(--radius-3);
+}
 
 .promo {
   background-color: var(--bg-accent);

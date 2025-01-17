@@ -3,6 +3,34 @@
 
 .hero__wrapper {
 	padding: 45px 0 70px;
+
+	@include tablet {
+		padding: 30px 0 50px;
+	}
+
+	@include mobile {
+		padding: 20px 0;
+	}
 }
+
+.hero__special-card {
+	@include mobile {
+		display: none;
+	}
+}
+
 .hero__content {
+}
+
+.hero__mobile-title {
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.hero__mobile-img {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	border-radius: var(--radius-3);
 }
