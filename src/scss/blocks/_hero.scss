@@ -22,6 +22,14 @@
 .hero__content {
 }
 
+.hero__mobile {
+	display: none;
+
+	@include mobile {
+		display: block;
+	}
+}
+
 .hero__mobile-title {
 	margin-bottom: 20px;
 	text-align: center;

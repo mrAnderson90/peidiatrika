@@ -73,6 +73,10 @@
 		box-shadow: calc(var(--border-raduis) * -0.4) calc(var(--border-raduis) * -0.2) 0 5px #fff;
 
 		background-color: var(--before-color);
+
+		@include mobile {
+			box-shadow: calc(var(--border-raduis) * -0.4) calc(var(--border-raduis) * -0.2) 0 4px #fff;
+		}
 	}
 }
 

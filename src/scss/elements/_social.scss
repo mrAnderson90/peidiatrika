@@ -26,11 +26,30 @@ a.social__link {
   background-color: var(--bg-base);
   border-radius: 50%;
 
-  transition: all .2s ease-in-out;
+  transition: all .3s ease-in-out;
+
+  @include tablet {
+    width: 30px;
+    height: 30px;
+
+    img {
+      width: 14px;
+    }
+  }
 
   &:hover {
-    opacity: 0.8;
-    transition: all .2s ease-in-out;
+    background-color: #07f;
+  }
+
+  &:hover img {
+    filter: invert(100%);
+    transition: all .3s ease-in-out;
+  }
+
+  &--tg {
+    &:hover {
+      background-color: #2ea8d8;
+    }
   }
 }
 

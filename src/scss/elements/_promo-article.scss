@@ -20,7 +20,7 @@
 
     border-radius: var(--radius-2);
 
-    background-position: center 80%;
+    background-position: center 85%;
     background-image: url('../img/background/pulse-md.svg');
   }
 
@@ -70,6 +70,11 @@
 }
 
 .promo-article__content {
+  max-width: 491px;
+
+  @include tablet {
+    max-width: 260px;
+  }
 
   @include mobile {
     max-width: 230px;

@@ -1,18 +1,9 @@
 .diagramm {
-  position: absolute;
-  bottom: 12px;
-  right: 18px;
-
   display: flex;
   align-items: flex-end;
   justify-content: center;
 
   overflow: hidden;
-
-  @include tablet {
-    right: 70px;
-    bottom: 2px;
-  }
 }
 
 .diagramm__col {
@@ -24,6 +15,10 @@
     width: 46px;
   }
 
+  @include mobile {
+    width: 18px;
+  }
+
 
   &--1 {
     height: 329px;
@@ -31,6 +26,10 @@
 
     @include tablet {
       height: 166px;
+    }
+
+    @include mobile {
+      height: 147px;
     }
   }
 
@@ -40,6 +39,10 @@
 
     @include tablet {
       height: 231px;
+    }
+
+    @include mobile {
+      height: 188px;
     }
   }
 
@@ -51,6 +54,10 @@
     @include tablet {
       height: 120px;
       border-bottom-right-radius: 0;
+    }
+
+    @include mobile {
+      height: 111px;
     }
   }
 }

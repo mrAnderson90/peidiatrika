@@ -7,6 +7,15 @@
   justify-content: space-between;
   align-items: flex-start;
   column-gap: 95px;
+
+  @include tablet {
+    flex-direction: column;
+    row-gap: 40px;
+  }
+
+  @include mobile {
+    row-gap: 20px;
+  }
 }
 
 .about-game__headers {
@@ -14,20 +23,61 @@
   flex-direction: column;
   justify-content: space-between;
   row-gap: 70px;
+
+  @include tablet {
+    flex-direction: row;
+    column-gap: 30px;
+  }
+
+  @include mobile {
+    flex-direction: column;
+    row-gap: 20px;
+  }
 }
 
 .about-game__header {
-
+  flex: 1;
 }
 
 .about-game__title {
   margin-bottom: 20px;
+
+  @include tablet {
+    margin-bottom: 10px;
+  }
+
+  @include mobile {
+    margin-bottom: 5px;
+  }
 }
 
 .about-game__content {
 
+  @include mobile {
+    max-width: 255px;
+  }
+
+  p {
+
+    &.restricted {
+      max-width: 460px;
+
+      @include tablet {
+        max-width: 310px;
+      }
+
+      @include tablet {
+        max-width: 230px;
+      }
+    }
+  }
 }
 
 .about-game__img {
   max-width: 566px;
+
+  @include tablet {
+    margin: 0 auto;
+    max-width: 433px;
+  }
 }

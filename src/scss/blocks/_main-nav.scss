@@ -24,7 +24,7 @@ a.main-nav__link {
 	font-size: 18px;
 
 	color: var(--main-text);
-
+	transition: all .2s ease-in-out;
 
 	@include tablet {
 		font-size: 12px;
@@ -32,5 +32,10 @@ a.main-nav__link {
 
 	@include mobile {
 		font-size: 8px;
+	}
+
+	&:hover {
+		color: #7d7d7d;
+		transition: all .2s ease-in-out;
 	}
 }
