@@ -16,15 +16,27 @@
               <nav class="main-nav">
                 <ul class="main-nav__list"> 
                   <li class="main-nav__item"> <a class="main-nav__link" href="#!">О проекте</a></li>
-                  <li class="main-nav__item"> <a class="main-nav__link" href="#!">Об игре</a></li>
+                  <li class="main-nav__item"> <a class="main-nav__link" href="#!">Контакты</a></li>
                 </ul>
               </nav>
-            </div><a class="header__rosmol" href="#!">
+            </div>
+            <button class="header__nav-btn" id="nav-open-btn"><img src="img/icons/menu.svg" alt="open menu"></button>
+            <button class="header__nav-btn hidden" id="nav-close-btn"><img src="img/icons/close-btn.svg" alt="close menu"></button><a class="header__rosmol" href="#!">
               <picture><img src="img/logo/rosmol.png" alt="Росмолодежь"></picture></a>
           </div>
         </div>
       </div>
     </header>
+    <div class="mob-nav" id="mobile-nav">
+      <div class="container">
+        <nav class="mob-nav__body">
+          <ul class="mob-nav__list">
+            <li class="mob-nav__item"><a class="mob-nav__link" href="#!">О проекте</a></li>
+            <li class="mob-nav__item"><a class="mob-nav__link" href="#!">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
     <main>
       <section class="hero">
         <div class="container">
@@ -183,5 +195,6 @@
       </footer>
     </main>
     <script src="js/index.js"></script>
+    <script src="js/modules/mobile-nav.js"></script>
   </body>
 </html>

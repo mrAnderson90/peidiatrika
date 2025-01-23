@@ -4,6 +4,14 @@
 
 .promo__slider {
   margin-bottom: 50px;
+
+  @include tablet {
+    margin-bottom: 30px;
+  }
+
+  @include mobile {
+    margin-bottom: 20px;
+  }
 }
 
 .promo__additional {

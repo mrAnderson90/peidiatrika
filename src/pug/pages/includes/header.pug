@@ -13,8 +13,12 @@ header.header
 							li.main-nav__item 
 								a.main-nav__link(href="#!") О проекте
 							li.main-nav__item 
-								a.main-nav__link(href="#!") Об игре
+								a.main-nav__link(href="#!") Контакты
+				button.header__nav-btn#nav-open-btn
+					img(src="img/icons/menu.svg", alt="open menu")
+				button.header__nav-btn.hidden#nav-close-btn
+					img(src="img/icons/close-btn.svg", alt="close menu")
 				a(href="#!").header__rosmol
 					picture
 						//- source(srcset="img/logo/logo-main-sm.png", media="(max-width: 788px)")
-						img(src="img/logo/rosmol.png", alt="Росмолодежь")
+						img(src="img/logo/rosmol.png", alt="Росмолодежь") 

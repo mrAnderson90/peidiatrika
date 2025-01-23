@@ -27,7 +27,43 @@
 }
 
 .header__nav {
+	@include mobile {
+		display: none;
+	}
+}
 
+.header__nav-btn {
+	display: none;
+
+	width: 32px;
+	height: 32px;
+	border-radius: 10px;
+
+	// transition: all .3s ease-in-out;
+
+	@include mobile {
+		display: block;
+	}
+
+	&:active {
+		outline: none;
+
+		transform: scale(.9);
+		// transition: all .3s ease-in-out;
+
+		-webkit-box-shadow: 4px 4px 10px 0px rgba(34, 60, 80, 0.1);
+		-moz-box-shadow: 4px 4px 10px 0px rgba(34, 60, 80, 0.1);
+		box-shadow: 4px 4px 10px 0px rgba(34, 60, 80, 0.1);
+	}
+
+	&.hidden {
+		display: none;
+	}
+	
+
+	img {
+		width: 24px;
+	}
 }
 
 .header__rosmol {
@@ -38,6 +74,6 @@
 	}
 
 	@include mobile {
-		max-width: 75px;
+		max-width: 120px;
 	}
 }

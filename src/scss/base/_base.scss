@@ -9,22 +9,6 @@ html {
 
 body {
 	font-family: var(--font-family);
-	font-size: var(--fz-primary);
-	color: var(--main-text);
-}
-
-a, a:link, a:visited {
-	color: #0F7DFF;
-}
-
-a:focus,
-button:focus {
-	outline-offset: 1px;
-	outline: #005fcc auto 1px;
-}
-
-body {
-	font-family: var(--font-family);
 	font-size: 20px;
 	line-height: 140%;
 	color: var(--black);
@@ -34,7 +18,60 @@ body {
 	}
 
 	@include mobile {
-		font-size: 10px;
+		font-size: 12px;
+	}
+}
+
+// a, a:link, a:visited {
+// 	color: #0F7DFF;
+// }
+
+a:focus,
+button:focus,
+a:active,
+button:active {
+	// outline-offset: 1px;
+	outline: none !important;
+}
+
+button::-moz-focus-inner {
+  border: 0 !important;
+}
+
+a.active.focus,
+a.active:focus,
+a.focus,
+a:active.focus,
+a:active:focus,
+a:focus,
+button.active.focus,
+button.active:focus,
+button.focus,
+button:active.focus,
+button:active:focus,
+button:focus,
+.btn.active.focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn:active:focus,
+.btn:focus {
+outline: 0!important;
+outline-color: transparent!important;
+outline-width: 0!important;
+outline-style: none!important;
+box-shadow: 0 0 0 0 rgba(0,123,255,0)!important;
+}
+
+.section {
+	padding: 70px 0;
+
+	@include tablet {
+		padding: 50px 0;
+	}
+
+	@include mobile {
+		padding: 20px 0;
 	}
 }
 
@@ -49,14 +86,6 @@ body {
   white-space: nowrap;
 }
 
-.section {
-	padding: 70px 0;
-
-	@include tablet {
-		padding: 50px 0;
-	}
-
-	@include mobile {
-		padding: 20px 0;
-	}
+.no-scroll {
+	overflow-y: hidden;
 }

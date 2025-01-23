@@ -38,18 +38,11 @@ a.social__link {
   }
 
   &:hover {
-    background-color: #07f;
+    background-color: #d9d9d9;
   }
 
-  &:hover img {
+  &:active {
     filter: invert(100%);
-    transition: all .3s ease-in-out;
-  }
-
-  &--tg {
-    &:hover {
-      background-color: #2ea8d8;
-    }
   }
 }
 
