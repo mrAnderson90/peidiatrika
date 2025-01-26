@@ -254,6 +254,14 @@ button:focus,
   }
 }
 
+.header {
+  background-color: var(--bg-base);
+}
+.header.fixed {
+  position: sticky;
+  z-index: 300;
+}
+
 .header__wrapper {
   padding: 24px 0;
   border-bottom: 2px solid var(--gray);
@@ -290,7 +298,11 @@ button:focus,
 }
 @media (max-width: 788px) {
   .header__nav-btn {
-    display: block;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 4px;
   }
 }
 .header__nav-btn:active {
@@ -300,11 +312,40 @@ button:focus,
   -moz-box-shadow: 4px 4px 10px 0px rgba(34, 60, 80, 0.1);
   box-shadow: 4px 4px 10px 0px rgba(34, 60, 80, 0.1);
 }
-.header__nav-btn.hidden {
-  display: none;
+.header__nav-btn::before, .header__nav-btn::after {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 4px;
+  border-radius: 4px;
+  background-color: var(--bg-accent);
+  transition: all 0.3s ease-in-out;
 }
-.header__nav-btn img {
-  width: 24px;
+.header__nav-btn span {
+  display: block;
+  width: 32px;
+  height: 4px;
+  border-radius: 4px;
+  background-color: var(--bg-accent);
+  opacity: 1;
+  transition: all 0.4s ease-in-out;
+}
+.header__nav-btn.active span {
+  position: absolute;
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+}
+.header__nav-btn.active::before, .header__nav-btn.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
+.header__nav-btn.active::before {
+  transform: rotate(45deg);
+}
+.header__nav-btn.active::after {
+  transform: rotate(-45deg);
 }
 
 .header__rosmol {
@@ -361,19 +402,28 @@ a.main-nav__link:hover {
 }
 
 .mob-nav {
-  display: none;
-}
-.mob-nav.active {
-  position: fixed;
+  position: absolute;
   top: 59px;
   left: 0;
   z-index: 200;
   width: 100vw;
-  height: calc(100vh - 59px);
+  height: calc(100vh - 45px);
   display: flex;
   justify-content: center;
   align-items: flex-start;
   background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+}
+
+.mob-nav.active {
+  position: fixed;
+  opacity: 1;
+  transition: all 0.4s ease-in-out;
+}
+.mob-nav.active .mob-nav__list {
+  transform: translateY(0);
+  transition: all 0.3s ease-in-out;
 }
 
 .mob-nav__list {
@@ -381,6 +431,8 @@ a.main-nav__link:hover {
   background-color: #fff;
   border-bottom-left-radius: var(--radius-3);
   border-bottom-right-radius: var(--radius-3);
+  transform: translateY(-25px);
+  transition: all 0.3s ease-in-out;
 }
 
 .mob-nav__item {

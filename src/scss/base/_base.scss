@@ -78,7 +78,7 @@ box-shadow: 0 0 0 0 rgba(0,123,255,0)!important;
 .visually-hidden {
   clip: rect(0 0 0 0);
   -webkit-clip-path: inset(50%);
-          clip-path: inset(50%);
+	clip-path: inset(50%);
   height: 1px;
   width: 1px;
   overflow: hidden;

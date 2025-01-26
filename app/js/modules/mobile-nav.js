@@ -1,15 +1,11 @@
-const mobileNavOpenBtn = document.getElementById('nav-open-btn');
-const mobileNavCloseBtn = document.getElementById('nav-close-btn');
+const mobileNavBtn = document.getElementById('mobile-nav-btn');
+const header = document.querySelector('.header');
 const mobileNavElement = document.getElementById('mobile-nav');
 
-mobileNavOpenBtn.addEventListener('click', event => {
+mobileNavBtn.addEventListener('click', event => {
   event.preventDefault();
-  openMobileNav();
-});
-
-mobileNavCloseBtn.addEventListener('click', event => {
-  event.preventDefault();
-  closeMobileNav();
+  
+  mobileNavBtn.classList.contains('active') ? closeMobileNav() : openMobileNav();
 });
 
 mobileNavElement.addEventListener('click', event => {
@@ -18,14 +14,14 @@ mobileNavElement.addEventListener('click', event => {
 
 function openMobileNav() {
   mobileNavElement.classList.add('active');
-  mobileNavOpenBtn.classList.add('hidden');
+  mobileNavBtn.classList.add('active');
+  header.classList.add('fixed');
   document.body.classList.add('no-scroll');
-  mobileNavCloseBtn.classList.remove('hidden');
 }
 
 function closeMobileNav() {
   mobileNavElement.classList.remove('active');
-  mobileNavCloseBtn.classList.add('hidden');
+  mobileNavBtn.classList.remove('active');
+  header.classList.remove('fixed');
   document.body.classList.remove('no-scroll');
-  mobileNavOpenBtn.classList.remove('hidden');
 }
