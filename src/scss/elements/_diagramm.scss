@@ -4,6 +4,10 @@
   justify-content: center;
 
   overflow: hidden;
+
+  @include mobile {
+    display: none;
+  }
 }
 
 .diagramm__col {

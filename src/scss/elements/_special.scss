@@ -75,7 +75,7 @@
 		background-color: var(--before-color);
 
 		@include mobile {
-			box-shadow: calc(var(--border-raduis) * -0.4) calc(var(--border-raduis) * -0.2) 0 4px #fff;
+			box-shadow: calc(var(--border-raduis) * -0.4) calc(var(--border-raduis) * -0.2) 0 2px #fff;
 		}
 	}
 }

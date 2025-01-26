@@ -10,7 +10,7 @@
 
   @include tablet {
     padding-top: 32px;
-    font-size: 12px;
+    font-size: 14px;
   }
 
   @include mobile {
@@ -39,10 +39,6 @@
 
   @include tablet {
     width: 200px;
-  }
-
-  @include mobile {
-    width: 150px;
   }
 }
 

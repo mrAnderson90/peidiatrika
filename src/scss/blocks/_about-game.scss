@@ -54,7 +54,7 @@
 .about-game__content {
 
   @include mobile {
-    max-width: 255px;
+    max-width: 100%;
   }
 
   p {
@@ -63,11 +63,7 @@
       max-width: 460px;
 
       @include tablet {
-        max-width: 310px;
-      }
-
-      @include tablet {
-        max-width: 230px;
+        max-width: 320px;
       }
     }
   }
