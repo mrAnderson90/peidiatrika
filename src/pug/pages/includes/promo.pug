@@ -1,17 +1,30 @@
+-
+  const articles = [
+    {
+      id: '01',
+      content: 'Интересные знакомства и&nbsp;погружение в&nbsp;профессию на&nbsp;трехдневном форуме',
+    },
+    {
+      id: '02',
+      content: 'Ориентация школьников 9-11 классов в&nbsp;медицину через интерактивные тренинги',
+    },
+    {
+      id: '03',
+      content: 'Уникальная настольная карточная игра для знакомства с&nbsp;направлением педиатрия',
+    },
+    {
+      id: '04',
+      content: 'Про любовь к&nbsp;детям и&nbsp;педиатрии',
+    },
+  ];
+
 section.section.promo
-  .container
+  .container.relative
     .promo__slider.slider
-      .slide
-        article.promo-article
-          .promo-article__img
-            picture
-              source(srcset="img/slider/promo-01-sm.jpg", type="image/jpeg", media="(max-width: 788px)")
-              source(srcset="img/slider/promo-01-md.jpg", type="image/jpeg", media="(max-width: 1250px)")
-              img(src="img/slider/promo-01.jpg", alt="Slide 01")
-          .promo-article__body
-            h3.title.promo-article__title Педиятрика&nbsp;–&nbsp;это...
-            .promo-article__content
-              p Интересные знакомства и&nbsp;погружение в&nbsp;профессию на&nbsp;трехдневном форуме
+      .swiper
+        .swiper-wrapper
+          each article in articles
+            +promo-article(article.id, article.content)
       button.slider__control.slider__control--previous
       button.slider__control.slider__control--next
     .promo__additional

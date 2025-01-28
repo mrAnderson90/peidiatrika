@@ -4,6 +4,7 @@
 
 .slider__control {
   position: absolute;
+  z-index: 50;
   top: 50%;
 
   width: 80px;
@@ -13,6 +14,7 @@
   border-radius: 50%;
 
   background-color: var(--bg-base);
+  transition: all .2s ease-in-out;
 
   @include tablet {
     width: 50px;
@@ -41,6 +43,8 @@
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+    transition: all .1s ease-in-out;
+
 
     @include mobile {
       width: 12px;
@@ -60,5 +64,21 @@
   &--next {
     right: 0;
     transform: translate(50%, -50%);
+  }
+
+  &:hover {
+    background-color: var(--gray);
+    transition: all .2s ease-in-out;
+  }
+
+  &:active::before {
+    width: 16px;
+    height: 16px;
+    transition: all .1s ease-in-out;
+
+    @include mobile {
+      width: 10px;
+      height: 10px;
+    }
   }
 }

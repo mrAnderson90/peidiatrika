@@ -21,6 +21,7 @@
 
 .main-nav__link,
 a.main-nav__link {
+	border-bottom: 1px solid #fff;
 	font-size: 18px;
 
 	color: var(--main-text);
@@ -35,6 +36,12 @@ a.main-nav__link {
 	}
 
 	&:hover {
+		border-color: var(--main-text);
+		transition: all .2s ease-in-out;
+	}
+
+	&:active {
+		border-color: var(--gray);
 		color: #7d7d7d;
 		transition: all .2s ease-in-out;
 	}

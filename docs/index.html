@@ -15,8 +15,8 @@
             <div class="header__nav">
               <nav class="main-nav">
                 <ul class="main-nav__list"> 
-                  <li class="main-nav__item"> <a class="main-nav__link" href="#!">О проекте</a></li>
-                  <li class="main-nav__item"> <a class="main-nav__link" href="#!">Контакты</a></li>
+                  <li class="main-nav__item"> <a class="main-nav__link" href="#about-project">О проекте</a></li>
+                  <li class="main-nav__item"> <a class="main-nav__link" href="#footer">Контакты</a></li>
                 </ul>
               </nav>
             </div>
@@ -60,23 +60,75 @@
         </div>
       </section>
       <section class="section promo">
-        <div class="container">
+        <div class="container relative">
           <div class="promo__slider slider">
-            <div class="slide">
-              <article class="promo-article">
-                <div class="promo-article__img">
-                  <picture>
-                    <source srcset="img/slider/promo-01-sm.jpg" type="image/jpeg" media="(max-width: 788px)">
-                    <source srcset="img/slider/promo-01-md.jpg" type="image/jpeg" media="(max-width: 1250px)"><img src="img/slider/promo-01.jpg" alt="Slide 01">
-                  </picture>
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <article class="promo-article">
+                    <div class="promo-article__img">
+                      <picture>
+                        <source srcset="img/slider/promo-01-sm.jpg" type="image/jpeg" media="(max-width: 788px)"/>
+                        <source srcset="img/slider/promo-01-md.jpg" type="image/jpeg" media="(max-width: 1250px)"/><img src="img/slider/promo-01.jpg" alt="Slide 01"/>
+                      </picture>
+                    </div>
+                    <div class="promo-article__body">
+                      <h3 class="title promo-article__title">Педиятрика&nbsp;–&nbsp;это...</h3>
+                      <div class="promo-article__content">
+                        <p>Интересные знакомства и&nbsp;погружение в&nbsp;профессию на&nbsp;трехдневном форуме</p>
+                      </div>
+                    </div>
+                  </article>
                 </div>
-                <div class="promo-article__body">
-                  <h3 class="title promo-article__title">Педиятрика&nbsp;–&nbsp;это...</h3>
-                  <div class="promo-article__content">
-                    <p>Интересные знакомства и&nbsp;погружение в&nbsp;профессию на&nbsp;трехдневном форуме</p>
-                  </div>
+                <div class="swiper-slide">
+                  <article class="promo-article">
+                    <div class="promo-article__img">
+                      <picture>
+                        <source srcset="img/slider/promo-02-sm.jpg" type="image/jpeg" media="(max-width: 788px)"/>
+                        <source srcset="img/slider/promo-02-md.jpg" type="image/jpeg" media="(max-width: 1250px)"/><img src="img/slider/promo-02.jpg" alt="Slide 02"/>
+                      </picture>
+                    </div>
+                    <div class="promo-article__body">
+                      <h3 class="title promo-article__title">Педиятрика&nbsp;–&nbsp;это...</h3>
+                      <div class="promo-article__content">
+                        <p>Ориентация школьников 9-11 классов в&nbsp;медицину через интерактивные тренинги</p>
+                      </div>
+                    </div>
+                  </article>
                 </div>
-              </article>
+                <div class="swiper-slide">
+                  <article class="promo-article">
+                    <div class="promo-article__img">
+                      <picture>
+                        <source srcset="img/slider/promo-03-sm.jpg" type="image/jpeg" media="(max-width: 788px)"/>
+                        <source srcset="img/slider/promo-03-md.jpg" type="image/jpeg" media="(max-width: 1250px)"/><img src="img/slider/promo-03.jpg" alt="Slide 03"/>
+                      </picture>
+                    </div>
+                    <div class="promo-article__body">
+                      <h3 class="title promo-article__title">Педиятрика&nbsp;–&nbsp;это...</h3>
+                      <div class="promo-article__content">
+                        <p>Уникальная настольная карточная игра для знакомства с&nbsp;направлением педиатрия</p>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                <div class="swiper-slide">
+                  <article class="promo-article">
+                    <div class="promo-article__img">
+                      <picture>
+                        <source srcset="img/slider/promo-04-sm.jpg" type="image/jpeg" media="(max-width: 788px)"/>
+                        <source srcset="img/slider/promo-04-md.jpg" type="image/jpeg" media="(max-width: 1250px)"/><img src="img/slider/promo-04.jpg" alt="Slide 04"/>
+                      </picture>
+                    </div>
+                    <div class="promo-article__body">
+                      <h3 class="title promo-article__title">Педиятрика&nbsp;–&nbsp;это...</h3>
+                      <div class="promo-article__content">
+                        <p>Про любовь к&nbsp;детям и&nbsp;педиатрии</p>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </div>
             </div>
             <button class="slider__control slider__control--previous"></button>
             <button class="slider__control slider__control--next"></button>
@@ -193,7 +245,8 @@
         </div>
       </footer>
     </main>
-    <script src="js/index.js"></script>
     <script src="js/modules/mobile-nav.js"></script>
+    <script src="js/modules/swiper-bundle.min.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>
