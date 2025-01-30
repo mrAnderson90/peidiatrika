@@ -43,7 +43,7 @@
   }
 
   @include mobile {
-    padding: 12px 12px;
+    padding: 12px 10px;
     border-radius: var(--radius-3);
   }
 }
@@ -90,8 +90,8 @@
   }
 
   @include mobile {
-    bottom: 1px;
-    right: 15px;
+    bottom: 2px;
+    right: 10px;
   }
 
   img {
@@ -102,7 +102,7 @@
     }
 
     @include mobile {
-      height: 77px;
+      height: 75px;
     }
   }
   

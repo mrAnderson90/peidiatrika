@@ -1,0 +1,30 @@
+.top-link {
+	position: fixed;
+	right: 40px;
+	bottom: 40px;
+	z-index: 100;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 60px;
+	height: 60px;
+	background-color: var(--secondary);
+	border: 1px solid #d6d6d6;
+	border-radius: 24px;
+	
+	opacity: 0;
+	pointer-events: none;
+	transition: all 0.2s ease-in;
+
+	&--visible {
+		opacity: 1;
+		pointer-events: all;
+	}
+
+	&:active {
+		transform: scale(0.8);
+		transition: all 0.2s ease-in;
+	}
+}

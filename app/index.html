@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="img/favicon/favicon.svg">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="Педиятрика">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
     <title>Педиятрика</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -20,7 +26,7 @@
                 </ul>
               </nav>
             </div>
-            <button class="header__nav-btn" id="mobile-nav-btn"><span></span></button><a class="header__rosmol" href="#!">
+            <button class="header__nav-btn" id="mobile-nav-btn"><span></span></button><a class="header__rosmol" href="https://fadm.gov.ru/directions/grant/" target="_blank">
               <picture><img src="img/logo/rosmol.png" alt="Росмолодежь"></picture></a>
           </div>
         </div>
@@ -226,10 +232,8 @@
       </section>
       <footer class="footer" id="footer">
         <div class="container">
-          <div class="footer__body">
-            <div class="footer__logo">
-              <picture><img src="img/logo/rosmol.png" alt="Росмолодежь"></picture>
-            </div>
+          <div class="footer__body"><a class="footer__logo" href="https://fadm.gov.ru/directions/grant/" target="_blank">
+              <picture><img src="img/logo/rosmol.png" alt="Росмолодежь"></picture></a>
             <div class="footer__content">
               <p>Проект реализуется при поддержке Росмолодежь.Гранты и кафедры педиатрии Медицинского Института ФГАОУ ВО НИУ «БелГУ»</p>
             </div>
@@ -237,14 +241,15 @@
               <h4 class="footer__subtitle">Связаться с нами:</h4>
               <p class="footer__email">evg-tat123@yandex.ru</p>
               <ul class="footer__social social__list">
-                <li class="social__item"><a class="social__link social__link--tg" href="#!"><img src="img/icons/telegram.svg" alt="Telegram"></a></li>
-                <li class="social__item"><a class="social__link" href="#!"><img src="img/icons/vk.svg" alt="VK"></a></li>
+                <li class="social__item"><a class="social__link social__link--tg" href="https://t.me/viktoriia_milky" target="_blank"><img src="img/icons/telegram.svg" alt="Telegram"></a></li>
+                <li class="social__item"><a class="social__link" href="https://vk.com/pediyatrica" target="_blank"><img src="img/icons/vk.svg" alt="VK"></a></li>
               </ul>
             </div>
           </div>
         </div>
       </footer>
-    </main>
+    </main><a class="top-link" id="scrollToTopBtn" href="#top"><img src="img/icons/arrow-up.svg" alt="Arrow up"></a>
+    <script src="js/modules/scroll-top.js"></script>
     <script src="js/modules/mobile-nav.js"></script>
     <script src="js/modules/swiper-bundle.min.js"></script>
     <script src="js/index.js"></script>

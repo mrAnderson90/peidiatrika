@@ -254,10 +254,11 @@ button:focus,
 
 .header {
   background-color: var(--bg-base);
+  position: relative;
+  z-index: 300;
 }
 .header.fixed {
   position: sticky;
-  z-index: 300;
 }
 
 .header__wrapper {
@@ -411,7 +412,7 @@ a.main-nav__link:active {
   top: 59px;
   left: 0;
   z-index: 200;
-  width: 100vw;
+  width: 100%;
   height: calc(100vh - 45px);
   display: flex;
   justify-content: center;
@@ -433,12 +434,16 @@ a.main-nav__link:active {
   transition: all 0.3s ease-in-out;
 }
 
+.mob-nav__body {
+  margin-top: 10px;
+}
+
 .mob-nav__list {
-  padding: 20px;
+  padding: 30px 20px;
   background-color: #fff;
   border-bottom-left-radius: var(--radius-3);
   border-bottom-right-radius: var(--radius-3);
-  transform: translateY(-25px);
+  transform: translateY(-30px);
   transition: all 0.3s ease-in-out;
 }
 
@@ -446,7 +451,7 @@ a.main-nav__link:active {
   text-align: center;
 }
 .mob-nav__item:not(:last-child) {
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 }
 
 .mob-nav__link,
@@ -553,7 +558,7 @@ a.mob-nav__link:active {
 }
 @media (max-width: 788px) {
   .promo__item {
-    padding: 12px 12px;
+    padding: 12px 10px;
     border-radius: var(--radius-3);
   }
 }
@@ -604,8 +609,8 @@ a.mob-nav__link:active {
 }
 @media (max-width: 788px) {
   .promo__img {
-    bottom: 1px;
-    right: 15px;
+    bottom: 2px;
+    right: 10px;
   }
 }
 .promo__img img {
@@ -618,7 +623,7 @@ a.mob-nav__link:active {
 }
 @media (max-width: 788px) {
   .promo__img img {
-    height: 77px;
+    height: 75px;
   }
 }
 
@@ -1315,6 +1320,32 @@ a.social__link:active {
 
 a.social__link--tg img {
   transform: translateX(-1px);
+}
+
+.top-link {
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  background-color: var(--secondary);
+  border: 1px solid #d6d6d6;
+  border-radius: 24px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.2s ease-in;
+}
+.top-link--visible {
+  opacity: 1;
+  pointer-events: all;
+}
+.top-link:active {
+  transform: scale(0.8);
+  transition: all 0.2s ease-in;
 }
 
 .btn,

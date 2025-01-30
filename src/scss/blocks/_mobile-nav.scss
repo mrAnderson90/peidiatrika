@@ -4,7 +4,7 @@
   left: 0;
   z-index: 200;
 
-  width: 100vw;
+  width: 100%;
   height: calc(100vh - 45px);
 
   display: flex;
@@ -31,15 +31,16 @@
 }
 
 .mob-nav__body {
+  margin-top: 10px;
 }
 
 .mob-nav__list {
-  padding: 20px;
+  padding: 30px 20px;
   background-color: #fff;
   border-bottom-left-radius: var(--radius-3);
   border-bottom-right-radius: var(--radius-3);
 
-  transform: translateY(-25px);
+  transform: translateY(-30px);
   transition: all .3s ease-in-out;
 }
 
@@ -47,7 +48,7 @@
   text-align: center;
 
   &:not(:last-child) {
-    margin-bottom: 16px;
+    margin-bottom: 24px;
   }
 }
 
